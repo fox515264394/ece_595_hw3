@@ -15,14 +15,21 @@
   <div id="columns">
     <div id="side">
       <div id="cart">
-       <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %> <%= render @cart %> <% end %>
+        <% if @cart %>
+          <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %> 
+            <%= render @cart %> 
+          <% end %>
+        <% end %>
       </div>
 
       <ul>
-        <li><a href="http://localhost:3000">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><a href="http://localhost:3000">Main Page</a></li>
+        <li><a href="http://localhost:3000/carts">Listing Carts</a></li>
+        <li><a href="http://localhost:3000/line_items">Listing Line_items</a></li>
+        <br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+        <li>Designer's e-mail</li>
+        <li>zhihao@unm.edu</li>
       </ul>
     </div>
     <div id="main">
